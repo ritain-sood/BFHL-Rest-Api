@@ -12,14 +12,14 @@ app.post("/bfhl", (req, res) => {
   if (!Array.isArray(data)) {
     return res.status(400).json({
       is_success: false,
-      user_id: "ritain_sood_2211985040",
+      user_id: "john_doe_123456",
       messsage: "Invalid input: 'data' must be an array.",
     });
   }
 
-  const user_id = "ritain_sood_2211985040";
-  const email = "ritain5040.be22@chitkarauniversity.edu.in";
-  const roll_number = "2211985040";
+  const user_id = "john_doe_123456";
+  const email = "john.doe@example.com";
+  const roll_number = "123456";
 
   const odd_number = [];
   const even_number = [];
