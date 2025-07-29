@@ -31,8 +31,8 @@ app.post("/bfhl", (req, res) => {
 
   data.forEach((item) => {
     if (!isNaN(item)) {
-      const sum = Number(item);
-      sum += Number;
+      const num = Number(item);
+    sum += num;
       if (num % 2 === 0) {
         even_number.push(item);
       } else {
@@ -40,15 +40,14 @@ app.post("/bfhl", (req, res) => {
       }
     } else if (/^[a-zA-Z]+$/.test(item)) {
       alphabets.push(item.toUpperCase());
-      concat_string.push(...item);
+      letters.push(...item);
     } else {
-      letters.push(item);
+      special_characters.push(item);
     }
   });
 
 
-
-  const reversed = special_characters.reverse().join('');
+  const reversed = letters.reverse().join('');
   let concat_string = '';
   for(let i=0;i<reversed.length;i++){
     concat_string += i%2 === 0 ? reversed[i].toUpperCase() : reversed[i].toLowerCase();
